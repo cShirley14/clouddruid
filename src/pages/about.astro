@@ -1,5 +1,5 @@
 ---
-import aboutImg from "@/assets/about-astro.png";
+import aboutImg from "@/assets/profile-pic.jpg";
 import PageLayout from "@/layouts/Base.astro";
 import { Image } from "astro:assets";
 
@@ -13,35 +13,58 @@ const meta = {
 	<div class="space-y-6">
 		<h1 class="title">About</h1>
 		<p>
-			Hi, I’m a starter Astro. I’m particularly great for getting you started with your own blogging
-			website.
+			Welcome &#128075, my name is Chantal and I am a Site Reliability Engineer working with
+			technologies such as Kubernetes, NixOS, and AWS.
 		</p>
 		<div class="flex justify-center">
 			<Image
-				alt="A cartoon cactus looking at the 'Astro.build' logo"
+				alt="An image of myself, the author of this blog."
 				fetchpriority="high"
 				loading="eager"
 				src={aboutImg}
+				class="rounded-full"
 			/>
 		</div>
-		<p>Here are my some of my awesome built in features:</p>
-		<ul class="list-inside list-disc">
-			<li>I'm ultra fast as I'm a static site</li>
-			<li>I'm fully responsive</li>
-			<li>I come with a light and dark mode</li>
-			<li>I'm easy to customise and add additional content</li>
-			<li>I have Tailwind CSS styling</li>
-			<li>Shiki code syntax highlighting</li>
-			<li>Satori for auto generating OG images for blog posts</li>
+		<p>A little bit about me.</p>
+		<ul class="list-outside list-disc pl-5 [&_ul]:list-[revert]">
+			<li>
+				I have 4 Cloud-Affiliated Certifications:
+				<ul style="margin-left: 1rem;">
+					<li>Certified Kubernetes Application Developer</li>
+					<li>AWS Security Specialty</li>
+					<li>AWS Developer Associate</li>
+					<li>AWS Solutions Architect Associate</li>
+				</ul>
+			</li>
+			<li>
+				Professionally these days I have been dabbling in:
+				<ul style="margin-left: 1rem;">
+					<li>
+						<a
+							aria-label="github repository"
+							class="cactus-link inline-block"
+							href="https://nixos.org"
+							rel="noopener noreferrer"
+							target="_blank">NixOS</a
+						>: Seriously if you have never heard of it, do yourself a favor, spin up a VM and check
+						it out. Version-controlled OS, where you can play, break, and test things painlessly, I
+						vote yes every time! I only develop under this OS, and am a full convert.
+					</li>
+					<li>Bash</li>
+					<li>Typescript</li>
+					<li>Java</li>
+					<li>Python</li>
+				</ul>
+				<li>
+					A little fun fact about me... Recently, someone told me I looked too young to have had two
+					careers! I actually used to be a certified educator. Armed with an M.Ed. from UNLV, I had
+					the joy of nurturing the next generation of young D&D players as a club sponsor. Let's
+					just say I've got the battle scars from wrangling those little ones to prove it! 😂
+					Running this blog evokes nostalgia of my teaching days in the high school and middle
+					school setting. I hope the insights I share offer some valuable insights and utility,
+					cheers!
+				</li>
+			</li>
 		</ul>
-		<p>
-			Clone or fork my <a
-				aria-label="github repository"
-				class="cactus-link inline-block"
-				href="https://github.com/chrismwilliams/astro-cactus"
-				rel="noopener noreferrer"
-				target="_blank">repo</a
-			> if you like me!
-		</p>
 	</div>
 </PageLayout>
