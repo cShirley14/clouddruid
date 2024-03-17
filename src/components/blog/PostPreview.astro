@@ -1,0 +1,35 @@
+---
+import type { HTMLTag, Polymorphic } from "astro/types";
+import type { CollectionEntry } from "astro:content";
+
+import FormattedDate from "../FormattedDate.astro";
+import { remarkReadingTime } from "src/utils/remark-reading-time";
+
+type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
+	post: CollectionEntry<"post">;
+	withDesc?: boolean;
+};
+
+const { as: Tag = "div", post, withDesc = false } = Astro.props;
+const { remarkPluginFrontmatter } = await post.render();
+const postDate = post.data.updatedDate ?? post.data.publishDate;
+---
+
+<FormattedDate class="min-w-[120px] text-gray-600 dark:text-gray-400" date={postDate} />
+<Tag>
+	{post.data.draft && <span class="text-red-500">(Draft) </span>}
+	<a class="cactus-link" data-astro-prefetch href={`/posts/${post.slug}/`}>
+		{post.data.title}
+		<span style="font-style: italic; text-decoration: none;">
+			({remarkPluginFrontmatter.minutesRead})
+		</span>
+		{
+			!withDesc && (
+				<>
+					<div style="margin-top: .25rem;">{post.data.description}</div>
+				</>
+			)
+		}
+	</a>
+</Tag>
+{withDesc && <q class="line-clamp-3 block italic">{post.data.description}</q>}
