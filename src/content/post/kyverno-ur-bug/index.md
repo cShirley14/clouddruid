@@ -252,10 +252,11 @@ objects that were deleted with their accompanying K8s namespaces.
 
 ## A Path Forward
 
-Fast-forward eight months and a few minor releases, and the bug was still
-present. A fresh revival of the original bug report was presented sharing that
-the bug was not corrected. In response, the Kyverno team appeared to implement
-[TTL functionality](https://github.com/kyverno/kyverno/issues/9089) on `UR`s.
+Fast-forward eight months and a few minor releases later, the bug was still
+present. With the passage of time, a fresh revival of the original bug report
+was presented, sharing that the bug was in fact not corrected. In response, the
+Kyverno team appeared to implement [TTL functionality](https://github.com/kyverno/kyverno/issues/9141)
+on `UR` resources.
 
 While I have not directly contributed to the fix in question, I found the
 evolving nature of this recurring bug fascinating. For me, it spoke to the
