@@ -41,8 +41,8 @@ get "stuck."
 ![Demo of Kyverno Infinitely Flipping Between States](./mutate-infinitely.gif)
 
 I uncovered an infinite loop of `Pending` and `Failed` `UR` states.
-Immediately I suspected some sort of race condition, whereby the quick
-deletion of the the K8s resource obstructed Kyverno's ability to process its
+Immediately, I suspected some sort of race condition, whereby the quick
+deletion of the K8s resource obstructed Kyverno's ability to process its
 mutation.
 
 ## The Policy
@@ -53,9 +53,9 @@ created.
 
 ### Mutating Resourses with JMESPath
 
-While there is nothing necessarily unique regarding the policy I developed;
-theoretically, any `MutateExisting` policy applied in a similar manner should
-cause the inifinite loop bug.
+While the policy I developed is not necessarily unique; theoretically, any
+`MutateExisting` policy applied in a similar manner should cause the inifinite
+loop bug.
 
 Kyverno is an incredibly powerful tool, and with JMESPath you can accomplish a
 great deal. The Policy in question aligned with annotations found in the
