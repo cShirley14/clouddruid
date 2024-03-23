@@ -18,8 +18,5 @@
 	],
 	"[astro]": {
 		"editor.defaultFormatter": "astro-build.astro-vscode"
-	},
-	"yaml.schemas": {
-		"https://json.schemastore.org/github-workflow.json": "file:///home/randomindie/repos/v2-clouddruid/.github/workflows/deploy.yml"
 	}
 }
