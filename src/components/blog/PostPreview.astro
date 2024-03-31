@@ -3,7 +3,6 @@ import type { HTMLTag, Polymorphic } from "astro/types";
 import type { CollectionEntry } from "astro:content";
 
 import FormattedDate from "../FormattedDate.astro";
-import { remarkReadingTime } from "src/utils/remark-reading-time";
 
 type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
 	post: CollectionEntry<"post">;
