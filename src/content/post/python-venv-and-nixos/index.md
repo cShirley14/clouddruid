@@ -2,7 +2,7 @@
 title: "Using Nix to Develop in Python"
 description: "My search for a Nix-ish solution that could wrangle Python's virtualenv automagically."
 publishDate: "19 Mar 2024"
-tags: ["Python", "Nix", "NixOS", "venv", "virtualenv", "bash", "virtual environments"]
+tags: ["Python", "Nix", "NixOS", "venv", "virtualenv", "bash"]
 draft: false
 coverImage:
   src: "./python.jpg"
