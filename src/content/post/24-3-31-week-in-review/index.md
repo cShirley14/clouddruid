@@ -178,9 +178,9 @@ deep historical dive looks super fascinating!
 ### Wasm on K8s
 
 I am sucker for a good tutorial, and a CNCF [community member](https://github.com/cr7258)
-recently published a [multi-part series](https://www.cncf.io/blog/2024/03/28/webassembly-on-kubernetes-the-practice-guide-part-02/)
+ published a [multi-part series](https://www.cncf.io/blog/2024/03/28/webassembly-on-kubernetes-the-practice-guide-part-02/)
 on Wasm in k8s using Rust. I recently did something adjacent and high level
-playing around with a Wasm plugin and this caught my eye as something to revisit
+playing around with a wasm plugin, so this caught my eye as something to revisit
 at a later date.
 
 ### Ubuntu 12 Years LTS
