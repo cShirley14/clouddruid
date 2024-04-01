@@ -170,7 +170,7 @@ ecosystem, and not make it easy to reformat your drive to do other things &#x1f4
 
 ### Special Characters
 
-I stumbled across and article reviewing the [origins of special characters](https://buttondown.email/hillelwayne/archive/why-do-regexes-use-and-as-line-anchors/)
+I stumbled across an article reviewing the [origins of special characters](https://buttondown.email/hillelwayne/archive/why-do-regexes-use-and-as-line-anchors/)
 in Regex. Regex is super powerful, useful, and can feel like an esoteric language
 at times. I have only done a cursory glance of this article, but Hillel Wayne's
 deep historical dive looks super fascinating!
