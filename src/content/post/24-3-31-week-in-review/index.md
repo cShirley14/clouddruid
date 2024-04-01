@@ -186,7 +186,7 @@ at a later date.
 ### Ubuntu 12 Years LTS
 
 Given how everything these days is built to break, planned to eventually fail,
-or designed to become obsolete. There is a catch though for the LTS, that being
+or designed to become obsolete, this article caught my eye. There is a catch though for the LTS, that being
 a charge for businesses who desire to keep their versions as far back as `14.04`.
 You can read more from [Linux-Magazine](https://www.linux-magazine.com/Online/News/Canonical-Bumps-LTS-Support-to-12-years).
 
@@ -201,7 +201,7 @@ a reminder to exercise caution with AI tools.
 ### Conversely, Speaking of AI &#x1F602;
 
 In theory, I want to continue to dive deeper into AI tools, and the [intersection](https://github.com/continuedev/continue)
-between opens source software and AI intrigues me. #BringYourOwnLLM
+between open source software and AI intrigues me. #BringYourOwnLLM
 
 ### AI and Emotional Intelligence
 
@@ -218,14 +218,14 @@ influence.
 
 ### OpenCost
 
-OSS k8s and cloud spend monitoring tool that is cloud-agnostic. See more on
+An OSS k8s and cloud spend monitoring tool that is cloud-agnostic. See more on
 their [GitHub page](https://github.com/opencost/opencost).
 
 ### Port vscode-nix-ide to vim
 
 Nix recently highlighted this project. I love vscode, use vim plugins, and use
-nix-ide, so [coc-nix](https://github.com/Freed-Wu/coc-nix) looked like something
-worthwhile to check out. Especially, if it keeps me in a terminal longer... one
+nix-ide, so [coc-nix](https://github.com/Freed-Wu/coc-nix) looks like something
+worth checking out. Especially, if it keeps me in a terminal longer... one
 day I'll figure out emacs... one day...
 
 ### AI and Racism
