@@ -22,10 +22,6 @@ export const siteConfig: SiteConfig = {
 			year: "numeric",
 		},
 	},
-	// TODO: configure webmentions
-	// webmentions: {
-	// 	link: "https://webmention.io/astro-cactus.chriswilliams.dev/webmention",
-	// },
 };
 
 // Used to generate links in both the Header & Footer.
