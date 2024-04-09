@@ -180,19 +180,19 @@ Apple's legal battles with the government.
 CISA recently shared a number of [upskilling resources](https://www.cisa.gov/audiences/high-risk-communities/projectupskill),
 a [high level overview](https://www.cisa.gov/audiences/high-risk-communities/cybersecurity-resources-high-risk-communities),
 and [volunteering opportunities](https://www.cisa.gov/audiences/high-risk-communities/cybervolunteerresourcecenter/cyber-volunteer-programs-region-7)
-to help bolster our nations cyber security posture.
+to help bolster our nation's cyber security posture.
 
 ### PCIe Gen 7
 
 [PCIe Gen 7](https://www.tomshardware.com/pc-components/motherboards/full-draft-of-pcie-gen-7-spec-is-now-available-for-members-to-review-on-track-for-full-release-in-2025)
 is on track to be released in 2025, which simultaneously made me
 think of my long-neglected [PC Building Simulator](https://store.steampowered.com/app/621060/PC_Building_Simulator/)
-video game on steam... I need to have more fun and play my games &#x1F602;.
+video game on Steam... I need to have more fun and play my games &#x1F602;.
 
 ### fx: More JSON Viewing
 
 [fx](https://github.com/antonmedv/fx) reminds me of [jnv](https://github.com/ynqa/jnv),
-a tool I learned about recently written in rust. fx is written and Go and seems
+a tool I learned about recently written in rust. fx is written in Go and seems
 to have decent interfacing options.
 
 ### Observability & Cloudspend
@@ -216,7 +216,7 @@ Google LLMs.
 ### Tiger's Resurrection
 
 A [Unix security audit and intrusion detection tool](https://www.nongnu.org/tiger/)
-has risen back into prominence as a powerful security linux tool, Linux
+has risen back into prominence as a powerful security option, Linux
 Magazine's take looks like a [worthwhile read](https://www.linux-magazine.com/Issues/2024/282/Tiger-Tiger-Burning-Bright).
 
 ### Self-hosted Everything
