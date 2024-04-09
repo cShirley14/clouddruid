@@ -43,7 +43,7 @@ updatedDate: "8 Apr 2024"
 1. [Kode Vicious & AI](#kode-vicious--ai)
 1. [xzbot](#🤖-xzbot)
 1. [Music & AI](#music--ai)
-1. [Copilot Produces Antisemtic Imagery](#copilot-predisposed-to-antisemitic-imagery)
+1. [Copilot Produces Antisemitic Imagery](#copilot-predisposed-to-antisemitic-imagery)
 1. [Ditching K8s for AI, Acorn's Story](#acorn-ditches-k8s)
 1. [Copyright Infrigement by OpenTofu](#opentofus-questionable-forking)
 1. [Faster Nix Indexing/Searching](#replits-nix-cli-utility-faster-indexing--searching)
