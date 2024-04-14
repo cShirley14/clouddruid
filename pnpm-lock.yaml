@@ -1,4 +1,4 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
 
 settings:
   autoInstallPeers: true
@@ -71,8 +71,8 @@ devDependencies:
     specifier: ^7.6.0
     version: 7.6.0(eslint@8.57.0)(typescript@5.4.5)
   astro-eslint-parser:
-    specifier: ^0.16.3
-    version: 0.16.3
+    specifier: ^0.17.0
+    version: 0.17.0(typescript@5.4.5)
   autoprefixer:
     specifier: ^10.4.19
     version: 10.4.19(postcss@8.4.38)
@@ -99,7 +99,7 @@ devDependencies:
     version: 4.0.1(eslint@8.57.0)
   eslint-plugin-perfectionist:
     specifier: ^2.9.0
-    version: 2.9.0(astro-eslint-parser@0.16.3)(eslint@8.57.0)(typescript@5.4.5)
+    version: 2.9.0(astro-eslint-parser@0.17.0)(eslint@8.57.0)(typescript@5.4.5)
   eslint-plugin-regexp:
     specifier: ^2.5.0
     version: 2.5.0(eslint@8.57.0)
@@ -2454,6 +2454,27 @@ packages:
       - supports-color
     dev: true
 
+  /astro-eslint-parser@0.17.0(typescript@5.4.5):
+    resolution: {integrity: sha512-yTgzioUI9MKgBF4LxP7YI+uuZLrnXgHDeW4dpa3VqCNbDmPzL7ix93tc0JJIwWGcskoSAAHZZVaBSp8bHyZZZA==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    dependencies:
+      '@astrojs/compiler': 2.7.1
+      '@typescript-eslint/scope-manager': 5.62.0
+      '@typescript-eslint/types': 5.62.0
+      '@typescript-eslint/typescript-estree': 5.62.0(typescript@5.4.5)
+      astrojs-compiler-sync: 0.3.5(@astrojs/compiler@2.7.1)
+      debug: 4.3.4
+      entities: 4.5.0
+      eslint-visitor-keys: 3.4.3
+      espree: 9.6.1
+      globby: 11.1.0
+      is-glob: 4.0.3
+      semver: 7.6.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: true
+
   /astro-expressive-code@0.33.5(astro@4.2.4):
     resolution: {integrity: sha512-9JAyllueMUN8JTl/h/yTdbKinNmfalEWcV11s3lSf/UJQbAZfWJuy+IlGcArZDI/CmD21GXhFHLqYthpdY33ug==}
     peerDependencies:
@@ -3687,7 +3708,7 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-perfectionist@2.9.0(astro-eslint-parser@0.16.3)(eslint@8.57.0)(typescript@5.4.5):
+  /eslint-plugin-perfectionist@2.9.0(astro-eslint-parser@0.17.0)(eslint@8.57.0)(typescript@5.4.5):
     resolution: {integrity: sha512-ipFtDrqtF99qVVo+FE1fo6aHyLLp7hg6PNGfzY5KxQjcl0XCbyEFvjtR1NfkHDTN9rdFeEDxg59LLOv3VOAHAw==}
     peerDependencies:
       astro-eslint-parser: ^0.16.0
@@ -3706,7 +3727,7 @@ packages:
         optional: true
     dependencies:
       '@typescript-eslint/utils': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
-      astro-eslint-parser: 0.16.3
+      astro-eslint-parser: 0.17.0(typescript@5.4.5)
       eslint: 8.57.0
       minimatch: 9.0.4
       natural-compare-lite: 1.4.0
