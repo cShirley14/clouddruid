@@ -92,8 +92,9 @@ It will be interesting to see if pricing pressure will eventually impact US EVs.
 
 ### Groq Hardware Supplier No Longer
 
-Groq has decidedly moved towards providing SaaS services for AI developers, and
-is no longer in the business of selling custom AI chips.
+Groq has [decidedly moved](https://www.eetimes.com/groq-ceo-we-no-longer-sell-hardware/)
+towards providing SaaS services for AI developers, and is no longer in the
+business of selling custom AI chips.
 
 > You get the sort of developer traction we’ve gotten, and people want to buy
 > hardware, but we are no longer selling hardware, because why would we at this
