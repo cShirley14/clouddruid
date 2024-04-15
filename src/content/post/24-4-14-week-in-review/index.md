@@ -56,10 +56,9 @@ updatedDate: "14 Apr 2024"
 1. [RaspberryPi Laptop](#pidock)
 1. [OpenTofu Strikes Back](#opentofu-strikes-back)
 1. [git stash](#git-stash)
-1. [Shell as a Source of Truth]()
-1. [Terraform Updates]()
-1. [Exhaustive K8s Release Notes by Sysdig]()
-1. [K8s News]()
+1. [Shell as a Source of Truth](#shell-guides)
+1. [Terraform Updates](#terrraform-updates)
+1. [K8s News](#k8s-news)
 
 ## &#x2728; Mental Bookmarks
 
