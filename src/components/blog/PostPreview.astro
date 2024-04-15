@@ -19,13 +19,17 @@ const postDate = post.data.updatedDate ?? post.data.publishDate;
 	{post.data.draft && <span class="text-red-500">(Draft) </span>}
 	<a class="cactus-link" data-astro-prefetch href={`/posts/${post.slug}/`}>
 		{post.data.title}
-		<span style="font-style: italic; text-decoration: none;">
+		<span style="font-style: italic;">
 			({remarkPluginFrontmatter.minutesRead})
 		</span>
+	</a>
+	<a data-astro-prefetch href={`/posts/${post.slug}/`}>
 		{
 			!withDesc && (
 				<>
-					<div style="margin-top: .25rem;">{post.data.description}</div>
+					<div style="margin-top: .25rem; text-decoration-line: none!important;">
+						{post.data.description}
+					</div>
 				</>
 			)
 		}
