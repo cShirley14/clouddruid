@@ -55,11 +55,11 @@ tags:
 
 ### Second Kubernetes Cert
 
-This past Friday I earned the Certified Kubernetes Administrator certification &#x1f389;. Studying for Kubernetes exams sometimes feels like an exercise in patience, this is due to the concentrated effort it takes to identify the correct hodgepodge of resources that will help make you successful. I think it would be nice to compile a running list of techniques and gotchas, so a reach goal for me will be to create a blog post with helpful strategies and tips. (Especially something I can go back to when I need to retake these exams &#x1f440;...)
+This past Friday I earned the Certified Kubernetes Administrator certification &#x1f389;. Studying for Kubernetes exams can sometimes feel like an exercise in patience. From the concentrated effort it takes to identify the correct hodgepodge of resources, to the tips, tricks, and encantations expected of you, there is a lot that goes into passing. Given my experiences, I think it would be nice to compile a running list of techniques and gotchas. So I think I will create a reach goal for myself to start a blog post with helpful strategies and tips. (Especially something I can go back to when I need to retake said exams &#x1f440;...)
 
 ### uwubernetes 1.30
 
-I died when I saw the [new theme](https://kubernetes.io/blog/2024/04/17/kubernetes-v1-30-release/) of `1.30`! I absolutely love that the maintainers/contributors have a sense of humor and keep things light &#x1f601;. There appear to be a great deal of updates, and when the time comes I will certainly be checking out [Sysdig's latest breakdown](https://sysdig.com/blog/whats-new-in-kubernetes-1-30/) of `1.30`.
+I died when I saw the [new theme](https://kubernetes.io/blog/2024/04/17/kubernetes-v1-30-release/) of `1.30`! I absolutely love that the maintainers/contributors have a sense of humor and keep things light &#x1f601;. There appears to be a great deal of updates, and when the time comes I will certainly be checking out [Sysdig's latest breakdown](https://sysdig.com/blog/whats-new-in-kubernetes-1-30/) of `1.30`.
 
 ### K8s Operators
 
@@ -75,8 +75,8 @@ you can harden your policies and infrastructure as needed.
 ### seccomp
 
 Armosec has a [multi-part deep dive into seccomp](https://www.armosec.io/blog/seccomp-internals-part-1/)
-that I have on my to-read list I love a good tutorial, and they appear to do a
-great job of showing implementation examples.
+that I have on my to-read list; I love a good tutorial, and implementation
+examples look fairly solid.
 
 ### Karpenter & Cloudspend
 
@@ -90,12 +90,12 @@ on syncing HCP Vault Secrets to Kubernetes with Vault Secrets Operator.
 
 ### Route 53 New AWS TLDs
 
-AWS added support for [18 additional Top-Level Domains](https://aws.amazon.com/about-aws/whats-new/2024/04/amazon-route-53-additional-top-level-domains/)
+AWS added support for [18 additional Top-Level Domains](https://aws.amazon.com/about-aws/whats-new/2024/04/amazon-route-53-additional-top-level-domains/),
 of which my favorites included: `.beer` and `.fun`
 
 ### SLA vs. SLO vs. SLI
 
-Checkly provides a comprehensive deep dive on what [SLA, SLO, and SLI mean](https://www.checklyhq.com/blog/sla-slo-sli/),
+Checkly provides a comprehensive deep dive on what [SLA/SLO/SLI mean](https://www.checklyhq.com/blog/sla-slo-sli/),
 how they differ, and how they are represented in the industry. Definitely
 another article on my to-read list.
 
@@ -108,21 +108,22 @@ notifications regarding impacted applications.
 ### hauditor
 
 hauditor allows you to [analyze security headers](https://github.com/trap-bytes/hauditor)
-returned by a web page and report dangerous configurations, this kind of reminds
-me of the warnings I get in protonmail regarding failed domain auth requirements
-(which can lead to things like spoofing and improper forwarding... the most
-recent offender being The Linux Foundation &#x1f625;).
+returned by a web page and report dangerous configurations. This type of
+alerting kind of reminds me of the warnings I get in protonmail regarding failed
+domain auth requirements (which can lead to things like spoofing and improper
+forwarding... the most recent offender from my inbox being The Linux Foundation
+&#x1f625;).
 
 ### nix-inspect
 
 [nix-inspect](https://github.com/bluskript/nix-inspect) provides an "Interactive tui for inspecting nix configs," building
-on nix repl and built in Rust &#x1f980;. Another tool I think would be fun to
+on nix repl and written in Rust &#x1f980;. Another tool I think would be fun to
 demo and blog about at some point.
 
 ### markdowndown
 
 [MarkdownDown](https://markdowndown.vercel.app/) converts any webpage into a
-clean markdown with images downloaded, I'm sure there are some pretty
+clean markdown file with images downloaded. I'm sure there are some pretty
 interesting use cases for this functionality.
 
 ### Gaming Keyboard
@@ -130,4 +131,3 @@ interesting use cases for this functionality.
 Tom's Hardware recently highlighted a keyboard that looks like an
 [NES controller](https://www.tomshardware.com/peripherals/mechanical-keyboards/grab-this-cool-retro-console-inspired-keyboard-for-just-dollar83).
 Not news but another fun modded keyboard to check out.
-
