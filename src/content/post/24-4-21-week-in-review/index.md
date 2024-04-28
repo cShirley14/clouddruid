@@ -1,5 +1,5 @@
 ---
-title: "Week In Review: 4/21/24"
+title: "Week In Review"
 description: "🎉 Leveling Up with my second K8s cert: CKA 🎉, Uwubernetes 😄, Useful Tools, and Cloud Tutorials."
 publishDate: "21 Apr 2024"
 coverImage:

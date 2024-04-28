@@ -1,5 +1,5 @@
 ---
-title: "Week In Review: 4/14/24"
+title: "Week In Review"
 description: "git switch ai-news-and-guides-galore-with-interesting-releases"
 publishDate: "14 Apr 2024"
 coverImage:

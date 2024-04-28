@@ -1,5 +1,5 @@
 ---
-title: "Week In Review: 4/7/24"
+title: "Week In Review"
 description: "So.Much.News. + AI setbacks (racism and continued intellectual property debates)"
 publishDate: "7 Apr 2024"
 coverImage:
