@@ -1,5 +1,5 @@
 ---
-title: "Week In Review: 3/31/24"
+title: "Week In Review"
 description: "News I found interesting over the course of the week."
 publishDate: "31 Mar 2024"
 tags:
