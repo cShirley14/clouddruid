@@ -1,47 +1,47 @@
-export type SiteConfig = {
+export interface Author {
+	name: string;
+	photo: string;
+	type: string;
+	url: string;
+}
+
+export interface Content {
+	"content-type": string;
+	html: string;
+	text: string;
+	value: string;
+}
+
+export interface PaginationLink {
+	srLabel?: string;
+	text?: string;
+	url: string;
+}
+
+export interface Rels {
+	canonical: string;
+}
+
+export interface SiteConfig {
 	author: string;
-	title: string;
-	description: string;
-	lang: string;
-	ogLocale: string;
 	date: {
 		locale: string | string[] | undefined;
 		options: Intl.DateTimeFormatOptions;
 	};
-};
-
-export type PaginationLink = {
-	url: string;
-	text?: string;
-	srLabel?: string;
-};
-
-export type SiteMeta = {
+	description: string;
+	lang: string;
+	ogLocale: string;
 	title: string;
+}
+
+export interface SiteMeta {
+	articleDate?: string | undefined;
 	description?: string;
 	ogImage?: string | undefined;
-	articleDate?: string | undefined;
-};
+	title: string;
+}
 
-export type Author = {
-	type: string;
-	name: string;
-	photo: string;
-	url: string;
-};
-
-export type Content = {
+export interface Summary {
 	"content-type": string;
 	value: string;
-	html: string;
-	text: string;
-};
-
-export type Rels = {
-	canonical: string;
-};
-
-export type Summary = {
-	"content-type": string;
-	value: string;
-};
+}

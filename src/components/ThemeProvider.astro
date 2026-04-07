@@ -9,6 +9,7 @@
 
 	function setTheme(newTheme) {
 		if (newTheme !== "light" && newTheme !== "dark") {
+			// eslint-disable-next-line no-console
 			return console.warn(
 				`Invalid theme value '${newTheme}' received. Expected 'light' or 'dark'.`,
 			);

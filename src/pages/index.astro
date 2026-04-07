@@ -1,8 +1,8 @@
 ---
-import SocialList from "@/components/SocialList.astro";
 import PostPreview from "@/components/blog/PostPreview.astro";
-import PageLayout from "@/layouts/Base.astro";
+import SocialList from "@/components/SocialList.astro";
 import { getAllPosts, sortMDByDate } from "@/data/post";
+import PageLayout from "@/layouts/Base.astro";
 
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
@@ -13,10 +13,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 	<section>
 		<p class="flex justify-center" style="margin-top: -4rem;">
 			<img
+				alt="Altered Image of Laptop by Sara Torda from Pixabay"
+				height="400"
 				src="/laptop-frontpage.svg"
 				width="400"
-				height="400"
-				alt="Altered Image of Laptop by Sara Torda from Pixabay"
 			/>
 		</p>
 		<h1 class="title mb-6">Welcome!</h1>

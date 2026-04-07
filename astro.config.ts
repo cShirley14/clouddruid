@@ -1,9 +1,9 @@
 import { defineConfig } from "astro/config";
 import fs from "fs";
 import mdx from "@astrojs/mdx";
-import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
-import remarkUnwrapImages from "remark-unwrap-images";
+import tailwindcss from "@tailwindcss/vite";
+import rehypeUnwrapImages from "rehype-unwrap-images";
 import rehypeExternalLinks from "rehype-external-links";
 import { remarkReadingTime } from "./src/utils/remark-reading-time";
 import icon from "astro-icon";
@@ -15,8 +15,9 @@ export default defineConfig({
 	// ! Please remember to replace the following site property with your own domain
 	site: "https://www.clouddruid.com/",
 	markdown: {
-		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
+		remarkPlugins: [remarkReadingTime],
 		rehypePlugins: [
+			rehypeUnwrapImages,
 			[
 				rehypeExternalLinks,
 				{
@@ -34,15 +35,12 @@ export default defineConfig({
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		icon(),
-		tailwind({
-			applyBaseStyles: false,
-		}),
 		sitemap(),
 		mdx(),
 	],
 	prefetch: true,
 	vite: {
-		plugins: [rawFonts([".ttf", ".woff"])],
+		plugins: [tailwindcss(), rawFonts([".ttf", ".woff"])],
 		optimizeDeps: {
 			exclude: ["@resvg/resvg-js"],
 		},

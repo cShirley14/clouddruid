@@ -1,7 +1,8 @@
 ---
+import { Image } from "astro:assets";
+
 import aboutImg from "@/assets/profile-pic.jpg";
 import PageLayout from "@/layouts/Base.astro";
-import { Image } from "astro:assets";
 
 const meta = {
 	description: "I'm a starter theme for Astro.build",
@@ -21,10 +22,10 @@ const meta = {
 		<div class="flex justify-center">
 			<Image
 				alt="An image of myself, the author of this blog."
+				class="rounded-full"
 				fetchpriority="high"
 				loading="eager"
 				src={aboutImg}
-				class="rounded-full"
 			/>
 		</div>
 		<p>A little bit about me.</p>
@@ -32,6 +33,7 @@ const meta = {
 			<li>
 				<b>Certifications earned:</b>
 				<ul style="margin-left: 1rem;">
+					<li>Certified Kubernetes Security Specialist &#x1F6E1;</li>
 					<li>Certified Kubernetes Administrator &#x2693</li>
 					<li>Certified Kubernetes Application Developer &#x2693</li>
 					<li>AWS Security Specialty &#x1F512</li>
@@ -42,7 +44,6 @@ const meta = {
 			<li>
 				<b>Currently I have my sights set on:</b>
 				<ul style="margin-left: 1rem;">
-					<li><b>Studying Next:</b> Certified Kubernetes Security Specialist</li>
 					<li>
 						<b>Enrolling in:</b>
 						<a
