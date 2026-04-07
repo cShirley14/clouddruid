@@ -5,7 +5,7 @@ import perfectionist from "eslint-plugin-perfectionist";
 import regexp from "eslint-plugin-regexp";
 import markdown from "@eslint/markdown";
 
-export default tseslint.config(
+export default [
 	eslint.configs.recommended,
 	...tseslint.configs.recommended,
 	...astro.configs.recommended,
@@ -44,4 +44,4 @@ export default tseslint.config(
 	{
 		ignores: ["node_modules", "dist", ".github", ".changeset", "src/env.d.ts", "src/content/**/*.md"],
 	},
-);
+];
