@@ -54,7 +54,7 @@ export async function GET(context: APIContext) {
 		weekday: "long",
 	});
 	const svg = await satori(markup(title, postDate), ogOptions);
-	const png = new Resvg(svg).render().asPng();
+	const png = new Uint8Array(new Resvg(svg).render().asPng());
 	return new Response(png, {
 		headers: {
 			"Cache-Control": "public, max-age=31536000, immutable",
