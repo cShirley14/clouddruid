@@ -5,7 +5,7 @@ publishDate: "06 April 2026"
 draft: false
 coverImage:
   src: "./cks-cert.png"
-  alt: "Chantal Shirley's Certified Kubernetes Security Specialist certificate issued by the Cloud Native Computing Foundation"
+  alt: "Chantal's Certified Kubernetes Security Specialist certificate issued by the Cloud Native Computing Foundation"
 tags:
   [
     "Kubernetes",

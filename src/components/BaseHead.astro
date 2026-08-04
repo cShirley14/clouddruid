@@ -13,6 +13,42 @@ const titleSeparator = "•";
 const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url).href;
+
+// JSON-LD structured data
+const websiteSchema = {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	name: siteConfig.title,
+	url: Astro.site?.toString(),
+	description: siteConfig.description,
+	author: {
+		"@type": "Person",
+		name: siteConfig.author,
+	},
+};
+
+const articleSchema = articleDate
+	? {
+			"@context": "https://schema.org",
+			"@type": "Article",
+			headline: title,
+			description: description,
+			image: socialImageURL,
+			datePublished: articleDate,
+			author: {
+				"@type": "Person",
+				name: siteConfig.author,
+			},
+			publisher: {
+				"@type": "Person",
+				name: siteConfig.author,
+			},
+			mainEntityOfPage: {
+				"@type": "WebPage",
+				"@id": canonicalURL.toString(),
+			},
+		}
+	: null;
 ---
 
 <meta charset="utf-8" />
@@ -33,7 +69,7 @@ const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url
 <meta content={siteConfig.author} name="author" />
 
 {/* Theme Colour */}
-<meta content="" name="theme-color" />
+<meta content="#141414" name="theme-color" />
 
 {/* Open Graph / Facebook */}
 <meta content={articleDate ? "article" : "website"} property="og:type" />
@@ -68,3 +104,10 @@ const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url
 <link href="/rss.xml" rel="alternate" title={siteConfig.title} type="application/rss+xml" />
 
 <meta content={Astro.generator} name="generator" />
+
+{/* JSON-LD Structured Data */}
+<script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+{articleSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
+
+{/* Cloudflare Web Analytics */}
+<script is:inline type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "436e7d72ceb64c9fb0aa5edbf0449e99"}'></script>

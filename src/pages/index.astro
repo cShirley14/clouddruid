@@ -9,7 +9,7 @@ const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
-<PageLayout meta={{ title: "Home" }}>
+<PageLayout meta={{ description: "CloudDruid is a blog about Kubernetes, NixOS, AWS, cloud infrastructure, and CI/CD by Chantal, Site Reliability Engineer.", title: "Home" }}>
 	<section>
 		<p class="flex justify-center" style="margin-top: -4rem;">
 			<img
