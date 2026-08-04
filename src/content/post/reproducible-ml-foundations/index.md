@@ -28,7 +28,7 @@ If you haven't heard of uv yet: it is from [Astral](https://astral.sh/), has
 [85k+ GitHub stars](https://github.com/astral-sh/uv), and OpenAI
 [acquired the team](https://openai.com/index/openai-to-acquire-astral/) earlier
 this year. Still [fully open source](https://astral.sh/blog/openai). Let's hope
-the AI doesn't hallucinate its own dependency manager into oblivion.
+their AI doesn't hallucinate uv into oblivion.
 
 ## Why uv instead of pip
 
@@ -113,6 +113,8 @@ entry:
 ```
 
 ## cd and go
+
+This is `.envrc`, the file [direnv](https://direnv.net/) looks for:
 
 ```bash
 use flake
