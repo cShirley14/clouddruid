@@ -11,13 +11,9 @@ pkgs.mkShell {
     echo ""
     echo "☁️  clouddruid dev environment"
     echo ""
-    echo "  pnpm dev       - start dev server"
-    echo "  pnpm build     - build for production"
-    echo "  pnpm preview   - preview production build"
-    echo "  pnpm format    - format code"
-    echo "  pnpm check     - type check"
-    echo ""
-    echo "  See package.json for all scripts"
+
+    ${pkgs.jq}/bin/jq -r '.scripts | to_entries[] | "  pnpm \(.key)\t\(.value)"' package.json | ${pkgs.util-linux}/bin/column -t -s $'\t'
+
     echo ""
   '';
 }

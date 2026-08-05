@@ -4,6 +4,7 @@ description: "Using Nix flakes, uv, and direnv to build a reproducible Python ML
 publishDate: "01 Aug 2026"
 tags: ["Python", "Nix", "NixOS", "ML", "uv", "flakes", "direnv"]
 draft: false
+updatedDate: "04 Aug 2026"
 coverImage:
   src: "./python.jpg"
   alt: "Image by Michael Schwarzenberger from Pixabay"
@@ -102,7 +103,7 @@ entry:
             # Use a named venv directory instead of the default .venv
             export UV_PROJECT_ENVIRONMENT=ml-ops
             if [ ! -d ml-ops ]; then
-              uv sync
+              uv sync --no-dev
               echo "Dependencies installed from uv.lock"
             fi
             source ml-ops/bin/activate
@@ -159,6 +160,7 @@ just apply-deps       # upgrade Python dependencies
 just apply-nix        # upgrade Nix toolchain
 just audit            # check for known vulnerabilities via pip-audit
 just rollback         # revert to last committed state
+just lab              # launch Jupyter Lab (dev deps install on-demand)
 ```
 
 The `audit` recipe runs
