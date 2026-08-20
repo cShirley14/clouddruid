@@ -2,6 +2,7 @@
 title: "30 Minutes, Kiro AI, Three.js, and a Rock Venue"
 description: "How Team Tech Savvy vibe-coded a concierge app for The Tabernacle in under 20 minutes at Technologists of Color's QuickBuild."
 publishDate: "20 Aug 2026"
+updatedDate: "20 Aug 2026"
 draft: false
 coverImage:
   src: "./cover.png"
@@ -54,7 +55,7 @@ The tech stack ended up being:
 
 And yes, I gratuitously got to add in NixOS to my workflow. Some things are non-negotiable. 😄
 
-The full source is up on GitHub: [aws-quickbuild-challenge](https://github.com/cShirley14/aws-quickbuild-challenge).
+The full source is up on GitHub: [aws-quickbuild-challenge](https://github.com/cShirley14/aws-quickbuild-challenge). You can also check out the [live site](https://cshirley14.github.io/aws-quickbuild-challenge/).
 
 ## The Demo
 
