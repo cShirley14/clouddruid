@@ -1,58 +1,52 @@
-import { defineConfig } from "astro/config";
-import fs from "fs";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
-import rehypeUnwrapImages from "rehype-unwrap-images";
-import rehypeExternalLinks from "rehype-external-links";
-import { remarkReadingTime } from "./src/utils/remark-reading-time";
-import icon from "astro-icon";
 import expressiveCode from "astro-expressive-code";
+import icon from "astro-icon";
+import { defineConfig } from "astro/config";
+import fs from "fs";
+import rehypeExternalLinks from "rehype-external-links";
+import rehypeUnwrapImages from "rehype-unwrap-images";
+
 import { expressiveCodeOptions } from "./src/site.config";
+import { remarkReadingTime } from "./src/utils/remark-reading-time";
 
 // https://astro.build/config
 export default defineConfig({
-	// ! Please remember to replace the following site property with your own domain
-	site: "https://www.clouddruid.com/",
+	integrations: [expressiveCode(expressiveCodeOptions), icon(), sitemap(), mdx()],
 	markdown: {
-		remarkPlugins: [remarkReadingTime],
 		rehypePlugins: [
 			rehypeUnwrapImages,
 			[
 				rehypeExternalLinks,
 				{
-					target: "_blank",
 					rel: ["nofollow, noopener, noreferrer"],
+					target: "_blank",
 				},
 			],
 		],
+		remarkPlugins: [remarkReadingTime],
 		remarkRehype: {
 			footnoteLabelProperties: {
 				className: [""],
 			},
 		},
 	},
-	integrations: [
-		expressiveCode(expressiveCodeOptions),
-		icon(),
-		sitemap(),
-		mdx(),
-	],
 	prefetch: true,
+	// ! Please remember to replace the following site property with your own domain
+	site: "https://www.clouddruid.com/",
 	vite: {
-		plugins: [tailwindcss(), rawFonts([".ttf", ".woff"])],
 		optimizeDeps: {
 			exclude: ["@resvg/resvg-js"],
 		},
+		plugins: [tailwindcss(), rawFonts([".ttf", ".woff"])],
 	},
 });
 
-function rawFonts(ext: Array<string>) {
+function rawFonts(ext: string[]) {
 	return {
 		name: "vite-plugin-raw-fonts",
-		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-		// @ts-ignore:next-line
-		transform(_, id) {
+		transform(_code: string, id: string) {
 			if (ext.some((e) => id.endsWith(e))) {
 				const buffer = fs.readFileSync(id);
 				return {

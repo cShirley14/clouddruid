@@ -18,34 +18,34 @@ const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url
 const websiteSchema = {
 	"@context": "https://schema.org",
 	"@type": "WebSite",
-	name: siteConfig.title,
-	url: Astro.site?.toString(),
-	description: siteConfig.description,
 	author: {
 		"@type": "Person",
 		name: siteConfig.author,
 	},
+	description: siteConfig.description,
+	name: siteConfig.title,
+	url: Astro.site?.toString(),
 };
 
 const articleSchema = articleDate
 	? {
 			"@context": "https://schema.org",
 			"@type": "Article",
-			headline: title,
-			description: description,
-			image: socialImageURL,
-			datePublished: articleDate,
 			author: {
 				"@type": "Person",
 				name: siteConfig.author,
 			},
+			datePublished: articleDate,
+			description: description,
+			headline: title,
+			image: socialImageURL,
+			mainEntityOfPage: {
+				"@id": canonicalURL.toString(),
+				"@type": "WebPage",
+			},
 			publisher: {
 				"@type": "Person",
 				name: siteConfig.author,
-			},
-			mainEntityOfPage: {
-				"@type": "WebPage",
-				"@id": canonicalURL.toString(),
 			},
 		}
 	: null;
@@ -106,8 +106,16 @@ const articleSchema = articleDate
 <meta content={Astro.generator} name="generator" />
 
 {/* JSON-LD Structured Data */}
-<script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
-{articleSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
+<script is:inline set:html={JSON.stringify(websiteSchema)} type="application/ld+json" />
+{
+	articleSchema && (
+		<script is:inline set:html={JSON.stringify(articleSchema)} type="application/ld+json" />
+	)
+}
 
 {/* Cloudflare Web Analytics */}
-<script is:inline type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "436e7d72ceb64c9fb0aa5edbf0449e99"}'></script>
+<script
+	data-cf-beacon='{"token": "436e7d72ceb64c9fb0aa5edbf0449e99"}'
+	is:inline
+	src="https://static.cloudflareinsights.com/beacon.min.js"
+	type="module"></script>
