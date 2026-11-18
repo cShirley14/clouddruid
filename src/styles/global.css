@@ -3,6 +3,9 @@
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/aspect-ratio";
 
+/* Make `dark:` follow the site's theme toggle (data-theme on <html>) instead of the OS setting */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 @theme inline {
 	--color-bgColor: hsl(var(--theme-bg));
 	--color-textColor: hsl(var(--theme-text));
