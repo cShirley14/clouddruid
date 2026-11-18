@@ -87,14 +87,35 @@
 		a {
 			text-decoration: underline;
 			text-underline-offset: 2px;
+			/* !important: the typography plugin's `text-decoration: underline` shorthand lives in the
+			   higher-priority utilities layer and would otherwise reset these on hover */
 			&:hover {
-				text-decoration-color: hsl(var(--theme-link));
-				text-decoration-thickness: 2px;
+				text-decoration-color: hsl(var(--theme-link)) !important;
+				text-decoration-thickness: 2px !important;
 			}
 		}
 		strong {
 			font-weight: 700;
 			color: hsl(var(--theme-text));
+		}
+		/* Side-by-side images: wrap them in <div class="image-row"> in markdown (rehype-unwrap-images
+		   strips the <p>, so a wrapper is needed). Shared height keeps tall phone photos in check;
+		   wraps on narrow screens. */
+		.image-row {
+			container-type: inline-size;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 1rem;
+			& > img {
+				/* Height scales with the column width (cqi) so wide photos still fit on one row */
+				height: min(22rem, 45cqi);
+				width: auto;
+				max-width: 100%;
+				object-fit: contain;
+				margin: 0 !important;
+				border-radius: 4px;
+			}
 		}
 		code {
 			border: 1px dotted hsl(var(--theme-text));

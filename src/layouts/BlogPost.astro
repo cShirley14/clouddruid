@@ -17,6 +17,7 @@ const {
 	data: { description, ogImage, publishDate, title, updatedDate },
 	id,
 } = post;
+// Generated card (uses the post's coverImage as its background, if any) unless ogImage overrides it
 const socialImage = ogImage ?? `/og-image/${id}.png`;
 const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString();
 const { headings } = await render(post);
@@ -52,6 +53,22 @@ const { headings } = await render(post);
 			<path d="M4.5 15.75l7.5-7.5 7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
 		</svg>
 	</button>
+	<!-- Image lightbox: post body images (not the cover) open here; click anywhere or Esc to close -->
+	<dialog
+		aria-label="Enlarged image"
+		class="m-auto max-h-none max-w-none bg-transparent p-0 backdrop:bg-black/85"
+		id="lightbox"
+	>
+		<figure class="flex cursor-zoom-out flex-col items-center gap-2">
+			<img alt="" class="max-h-[85vh] max-w-[95vw] object-contain" id="lightbox-img" />
+			<figcaption class="text-center text-sm text-zinc-200" id="lightbox-caption"></figcaption>
+		</figure>
+		<button
+			aria-label="Close image"
+			class="fixed end-4 top-4 rounded-full bg-zinc-800 px-3 py-1 text-xl text-zinc-100 hover:bg-zinc-700"
+			type="button">&times;</button
+		>
+	</dialog>
 </BaseLayout>
 
 <script>
@@ -71,4 +88,35 @@ const { headings } = await render(post);
 
 	const observer = new IntersectionObserver(callback);
 	observer.observe(targetHeader);
+
+	// Lightbox: <dialog> gives Esc-to-close and focus handling for free
+	const lightbox = document.getElementById("lightbox") as HTMLDialogElement;
+	const lightboxImg = document.getElementById("lightbox-img") as HTMLImageElement;
+	const lightboxCaption = document.getElementById("lightbox-caption") as HTMLSpanElement;
+
+	function openLightbox(img: HTMLImageElement) {
+		lightboxImg.src = img.currentSrc || img.src;
+		lightboxImg.alt = img.alt;
+		lightboxCaption.textContent = img.alt;
+		lightboxCaption.hidden = !img.alt;
+		lightbox.showModal();
+	}
+
+	// Skip images that are already links, so clicking them still follows the link
+	document.querySelectorAll<HTMLImageElement>(".prose-cactus img:not(a img)").forEach((img) => {
+		img.classList.add("cursor-zoom-in");
+		img.tabIndex = 0;
+		img.setAttribute("role", "button");
+		img.setAttribute("aria-label", img.alt ? `Enlarge image: ${img.alt}` : "Enlarge image");
+		img.addEventListener("click", () => openLightbox(img));
+		img.addEventListener("keydown", (e) => {
+			if (e.key === "Enter" || e.key === " ") {
+				e.preventDefault();
+				openLightbox(img);
+			}
+		});
+	});
+
+	// Any click (image, caption, or backdrop) closes it
+	lightbox.addEventListener("click", () => lightbox.close());
 </script>
